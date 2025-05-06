@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<!-- ICD2O-Unit5-04-PHP -->
+<!-- ICD2O-Unit5-06-PHP -->
 <html lang="en-ca">
 
 <head>
   <meta charset="utf-8" />
-  <meta name="description" content="Museum Entry Discount, with PHP" />
+  <meta name="description" content="Multiply Two Numbers, in PHP" />
   <meta name="keywords" content="mths, icd2o" />
   <meta name="author" content="Olivia TD" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -30,7 +30,7 @@
     sizes="16x16"
     href="./favicon-16x16.png" />
   <link rel="manifest" href="./site.webmanifest" />
-  <title>Museum Entry Discount, with PHP</title>
+  <title>Multiply Two Numbers, in PHP</title>
 </head>
 
 <body>
@@ -38,27 +38,28 @@
   <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
     <header class="mdl-layout__header">
       <div class="mdl-layout__header-row">
-        <span class="mdl-layout-title">Museum Entry Discount, with PHP</span>
+        <span class="mdl-layout-title">Multiply Two Numbers, in PHP</span>
       </div>
     </header>
     <main class="mdl-layout__content">
       <div class="right-image">
-        <img src="./images/museum.png" alt="Image of the outside of a museum." />
+        <img src="./images/Multiplication.png" alt="Image of a multiplication table." />
       </div>
       <div class=" page-content-php">
         <div id="user-info">
 
           <?php
           // input
-          $age  = intval($_GET["age"]);
-          $dayOfTheWeek = $_GET["day"];
+          $counter = 0;
+          $answer = 0;
+          $firstInteger  = intval($_GET["first-integer"]);
+          $secondInteger  = intval($_GET["second-integer"]);
 
-
-          if ($dayOfTheWeek == "tuesday" || $dayOfTheWeek == "thursday" || ($age > 12 && $age < 21)) {
-            echo "<p>You are eligible for the discount.</p>";
-          } else {
-            echo "<p>You are NOT eligible for the discount.</p>";
+          while ($counter < $secondInteger) {
+            $counter = $counter + 1;
+            $answer = $answer + $firstInteger;
           }
+          echo "<p>The product is " . $answer . ".</p>";
           ?>
 
         </div>
